@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Welcome from './components/Welcome';
+import QuestionText from './components/QuestionText';
+import QuestionRanking from './components/QuestionRanking';
+import QuestionMedia from './components/QuestionMedia';
+import Insights from './components/Insights';
+
+export const AnswersContext = React.createContext();
 
 function App() {
+  const [answers, setAnswers] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnswersContext.Provider value={{ answers, setAnswers }}>
+      <Router>
+        <Routes>
+          <Route path="/question1" element={<QuestionText />} />
+          <Route path="/question2" element={<QuestionRanking />} />
+          <Route path="/question3" element={<QuestionMedia />} />
+          {/* Add more routes for additional questions as needed */}
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/" element={<Welcome />} />
+        </Routes>
+      </Router>
+    </AnswersContext.Provider>
   );
 }
 
