@@ -29,6 +29,27 @@ function Insights() {
         <Typography variant="body1">
           {`Question 3: ${answers.question3}`}
         </Typography>
+        <Typography variant="body1">
+          {`Question 4: ${answers.question4}`}
+        </Typography>
+        <Typography variant="body1">
+          {`Question 5: ${answers.question5}`}
+        </Typography>
+        <Typography variant="body1">
+          {`Question 6: ${answers.question6}`}
+        </Typography>
+        <Typography variant="body1">
+          {`Question 7: ${answers.question7}`}
+        </Typography>
+        <Typography variant="body1">
+          {`Question 8: ${answers.question8}`}
+        </Typography>
+        <Typography variant="body1">
+          {`Question 9: ${answers.question9}`}
+        </Typography>
+        <Typography variant="body1">
+          {`Question 10: ${answers.question10}`}
+        </Typography>
       </Box>
     </Box>
   );

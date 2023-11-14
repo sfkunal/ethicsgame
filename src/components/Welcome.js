@@ -6,7 +6,7 @@ function Welcome() {
   const navigate = useNavigate();
 
   const startGame = () => {
-    navigate('/question1');
+    navigate('/q1');
   };
 
   return (
