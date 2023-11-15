@@ -47,8 +47,8 @@ function QuestionFive() {
           Undo
         </Button>
       </Box>
-      <Typography variant="h4" component="h1" gutterBottom>
-      The following are selected real tweets. Click and rank tweets the break your ethical values.
+      <Typography variant="h7" component="h1" gutterBottom>
+      The following are selected real tweets. Click and rank the tweets that break your ethical values.
       </Typography>
       <Box sx={{ width: '50%', margin: '0 auto' }}>
         {itemsFromBackend.map((item) => (
