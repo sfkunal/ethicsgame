@@ -48,7 +48,7 @@ function QuestionFour() {
         </Button>
       </Box>
       <Typography variant="h4" component="h1" gutterBottom>
-        Select your top 3 items:
+        The following are selected real tweets. Click and rank tweets the break your ethical values.
       </Typography>
       <Box sx={{ width: '50%', margin: '0 auto' }}>
         {itemsFromBackend.map((item) => (
