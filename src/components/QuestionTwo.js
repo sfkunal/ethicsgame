@@ -27,10 +27,10 @@ function QuestionTwo() {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: '100vh' }}
+      style={{ minHeight: '100vh', width: '70%', margin: '0 auto' }}
     >
-      <Typography variant="h4" component="h1" gutterBottom>
-        What is your stance on internet ethics?
+      <Typography variant="h7" component="h1" gutterBottom>
+      A user reports a potentially harmful post targeting another user, but upon investigation, you find it is a heated but non-threatening argument. How should you handle this situation?
       </Typography>
       <RadioGroup
         aria-label="quiz"
@@ -40,16 +40,16 @@ function QuestionTwo() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Option 1" />
+            <FormControlLabel value="option1" control={<Radio />} label="Suspend both users involved to prevent escalation." />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Option 2" />
+            <FormControlLabel value="option2" control={<Radio />} label="Ignore the report, as it doesn't violate community guidelines." />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Option 3" />
+            <FormControlLabel value="option3" control={<Radio />} label="Privately counsel the users involved and encourage respectful communication." />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Option 4" />
+            <FormControlLabel value="option4" control={<Radio />} label="Share the report publicly, seeking the community's opinion on the matter." />
           </Grid>
         </Grid>
       </RadioGroup>

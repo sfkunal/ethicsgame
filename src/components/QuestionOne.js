@@ -27,10 +27,10 @@ function QuestionOne() {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: '100vh' }}
+      style={{ minHeight: '100vh', width: '70%', margin: '0 auto'}}
     >
-      <Typography variant="h4" component="h1" gutterBottom>
-        What is your stance on internet ethics?
+      <Typography variant="h7" component="h1" gutterBottom>
+      As an internet moderator, you come across a post containing information that appears misleading, but the intent is unclear. What is the most appropriate course of action?
       </Typography>
       <RadioGroup
         aria-label="quiz"
@@ -40,16 +40,16 @@ function QuestionOne() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Option 1" />
+            <FormControlLabel value="option1" control={<Radio />} label="Immediately remove the post to prevent further spread." />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Option 2" />
+            <FormControlLabel value="option2" control={<Radio />} label="Engage with the author to seek clarification on their intent." />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Option 3" />
+            <FormControlLabel value="option3" control={<Radio />} label="Conduct a thorough investigation before taking any action." />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Option 4" />
+            <FormControlLabel value="option4" control={<Radio />} label="Flag the post for community review without making any immediate changes." />
           </Grid>
         </Grid>
       </RadioGroup>
