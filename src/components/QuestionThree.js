@@ -14,7 +14,7 @@ function QuestionThree() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-      const answer = ' Empathy is ' + selectedValue + ' in technological decision-making.';
+      const answer = 'Empathy is ' + selectedValue + ' in technological decision-making.';
 			setAnswers({ ...answers, question3: answer });
       navigate('/q4'); // replace with the path to the next question
     } else {

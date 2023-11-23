@@ -31,7 +31,6 @@ function App() {
           <Route path="/q8" element={<QuestionEight />} />
           <Route path="/q9" element={<QuestionNine />} />
           <Route path="/q10" element={<QuestionTen />} />
-          {/* Add more routes for additional questions as needed */}
           <Route path="/insights" element={<Insights />} />
           <Route path="/" element={<Welcome />} />
         </Routes>
