@@ -1,14 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { Button, Typography, RadioGroup, FormControlLabel, Radio, Grid, Box } from '@mui/material';
+import { Button, Typography, RadioGroup, FormControlLabel, Radio, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
-
-const imagesFromBackend = [
-  { id: '1', src: 'd1.jpeg' },
-  { id: '2', src: 'd2.jpeg' },
-  { id: '3', src: 'd3.jpeg' },
-  { id: '4', src: 'd4.jpeg' },
-];
 
 function QuestionEight() {
   const navigate = useNavigate();
@@ -21,8 +14,7 @@ function QuestionEight() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-			const selectedImage = imagesFromBackend.find(image => image.id === selectedValue);
-      setAnswers({ ...answers, question8: selectedImage.src });
+			setAnswers({ ...answers, question8: selectedValue });
       navigate('/q9'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');
@@ -35,10 +27,10 @@ function QuestionEight() {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: '100vh' }}
+      style={{ minHeight: '100vh', width: '70%', margin: '0 auto'}}
     >
-      <Typography variant="h4" component="h1" gutterBottom>
-        Which image do you prefer?
+      <Typography variant="h7" component="h1" gutterBottom>
+      In the context of intellectual property, what should be the primary focus of legal frameworks?
       </Typography>
       <RadioGroup
         aria-label="quiz"
@@ -47,19 +39,18 @@ function QuestionEight() {
         onChange={handleChange}
       >
         <Grid container spacing={3}>
-          {imagesFromBackend.map((image) => (
-            <Grid item xs={6} key={image.id}>
-              <Box component="label">
-                <img src={image.src} alt="" style={{  maxHeight: '200px' }} />
-                <FormControlLabel
-                  value={image.id}
-                  control={<Radio />}
-                  label={`Option ${image.id}`}
-                  labelPlacement="bottom"
-                />
-              </Box>
-            </Grid>
-          ))}
+          <Grid item xs={6}>
+            <FormControlLabel value="option1" control={<Radio />} label="Protecting the rights of individual creators" />
+          </Grid>
+          <Grid item xs={6}>
+            <FormControlLabel value="option2" control={<Radio />} label="Encouraging market competition and innovation" />
+          </Grid>
+          <Grid item xs={6}>
+            <FormControlLabel value="option3" control={<Radio />} label="Ensuring broad access to information and knowledge" />
+          </Grid>
+          <Grid item xs={6}>
+            <FormControlLabel value="option4" control={<Radio />} label="Safeguarding corporate profits and investments" />
+          </Grid>
         </Grid>
       </RadioGroup>
       <Button variant="contained" color="primary" onClick={nextQuestion}>

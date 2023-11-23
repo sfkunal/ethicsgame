@@ -4,15 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
 const itemsFromBackend = [
-  { id: '1', content: 'Item 1' },
-  { id: '2', content: 'Item 2' },
-  { id: '3', content: 'Item 3' },
-  { id: '4', content: 'Item 4' },
-  { id: '5', content: 'Item 5' },
-  { id: '6', content: 'Item 6' },
-  { id: '7', content: 'Item 7' },
-  { id: '8', content: 'Item 8' },
+  { id: '1', content: 'Strengthening algorithms for content filtering' },
+  { id: '2', content: 'Promoting media literacy and critical thinking' },
+  { id: '3', content: 'Imposing strict regulatory measures on online platforms' },
+  { id: '4', content: 'Encouraging user self-moderation and reporting' },
+  { id: '5', content: 'Collaborating with fact-checking organizations' },
+  { id: '6', content: 'Allowing unrestricted freedom of speech online' },
+  { id: '7', content: 'Developing AI for context-aware content analysis' },
+  { id: '8', content: 'Implementing clear and consistent community guidelines' },
 ];
+
 
 const colors = ['gold', 'silver', '#cd7f32']; // Gold, Silver, Bronze
 
@@ -48,7 +49,7 @@ function QuestionFive() {
         </Button>
       </Box>
       <Typography variant="h7" component="h1" gutterBottom>
-      The following are selected real tweets. Click and rank the tweets that break your ethical values.
+      Rank the following approaches in addressing misinformation and content moderation in order of effectiveness:
       </Typography>
       <Box sx={{ width: '50%', margin: '0 auto' }}>
         {itemsFromBackend.map((item) => (

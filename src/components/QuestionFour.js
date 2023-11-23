@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
 const itemsFromBackend = [
-  { id: '1', content: 'Item 1' },
-  { id: '2', content: 'Item 2' },
-  { id: '3', content: 'Item 3' },
-  { id: '4', content: 'Item 4' },
-  { id: '5', content: 'Item 5' },
-  { id: '6', content: 'Item 6' },
-  { id: '7', content: 'Item 7' },
-  { id: '8', content: 'Item 8' },
+  { id: '1', content: 'Protecting individual creators' },
+  { id: '2', content: 'Encouraging innovation' },
+  { id: '3', content: 'Ensuring affordable access to information' },
+  { id: '4', content: 'Safeguarding corporate profits' },
+  { id: '5', content: 'Fostering a culture of sharing knowledge' },
+  { id: '6', content: 'Balancing the rights of creators and users' },
+  { id: '7', content: 'Strengthening copyright laws' },
+  { id: '8', content: 'Promoting open-source initiatives' },
 ];
 
 const colors = ['gold', 'silver', '#cd7f32']; // Gold, Silver, Bronze
@@ -48,7 +48,7 @@ function QuestionFour() {
         </Button>
       </Box>
       <Typography variant="h7" component="h1" gutterBottom>
-        The following are selected real tweets. Click and rank the tweets that break your ethical values.
+        Rank the following in order of importance in the realm of intellectual property:
       </Typography>
       <Box sx={{ width: '50%', margin: '0 auto' }}>
         {itemsFromBackend.map((item) => (

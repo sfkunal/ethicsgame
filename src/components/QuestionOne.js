@@ -30,7 +30,7 @@ function QuestionOne() {
       style={{ minHeight: '100vh', width: '70%', margin: '0 auto'}}
     >
       <Typography variant="h7" component="h1" gutterBottom>
-      As an internet moderator, you come across a post containing information that appears misleading, but the intent is unclear. What is the most appropriate course of action?
+      What is the primary virtue that should guide technological innovation?
       </Typography>
       <RadioGroup
         aria-label="quiz"
@@ -40,16 +40,16 @@ function QuestionOne() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Immediately remove the post to prevent further spread." />
+            <FormControlLabel value="option1" control={<Radio />} label="Efficiency" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Engage with the author to seek clarification on their intent." />
+            <FormControlLabel value="option2" control={<Radio />} label="Justice" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Conduct a thorough investigation before taking any action." />
+            <FormControlLabel value="option3" control={<Radio />} label="Profitability" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Flag the post for community review without making any immediate changes." />
+            <FormControlLabel value="option4" control={<Radio />} label="Innovation" />
           </Grid>
         </Grid>
       </RadioGroup>

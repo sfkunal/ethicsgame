@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
 const imagesFromBackend = [
-  { id: '1', src: 'd1.jpeg' },
-  { id: '2', src: 'd2.jpeg' },
-  { id: '3', src: 'd3.jpeg' },
-  { id: '4', src: 'd4.jpeg' },
+  { id: '1', src: 'dystopian.jpeg' },
+  { id: '2', src: 'utopian.jpeg' },
+  { id: '3', src: 'war.jpeg' },
+  { id: '4', src: 'space.jpeg' },
 ];
 
 function QuestionTen() {

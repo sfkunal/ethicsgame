@@ -29,8 +29,8 @@ function QuestionThree() {
       alignItems="center"
       style={{ minHeight: '100vh', width: '70%', margin: '0 auto' }}
     >
-      <Typography variant="h4\7" component="h1" gutterBottom>
-      An anonymous user consistently shares information that is later proven to be false and harmful. What steps should you take as a moderator?
+      <Typography variant="h7" component="h1" gutterBottom>
+      What role does empathy play in technological decision-making?
       </Typography>
       <RadioGroup
         aria-label="quiz"
@@ -40,16 +40,16 @@ function QuestionThree() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Ban the anonymous user immediately to prevent further harm." />
+            <FormControlLabel value="option1" control={<Radio />} label="Essential for ethical development" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Implement stricter verification measures for anonymous accounts." />
+            <FormControlLabel value="option2" control={<Radio />} label="Irrelevant, decisions should be based on logic" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Engage the community in a public discussion about the false information." />
+            <FormControlLabel value="option3" control={<Radio />} label="Nice to have but not crucial" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Encourage users to report and debunk the false information collectively." />
+            <FormControlLabel value="option4" control={<Radio />} label="Impedes progress" />
           </Grid>
         </Grid>
       </RadioGroup>

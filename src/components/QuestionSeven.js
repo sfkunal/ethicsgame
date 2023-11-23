@@ -4,15 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
 const itemsFromBackend = [
-  { id: '1', content: 'Item 1' },
-  { id: '2', content: 'Item 2' },
-  { id: '3', content: 'Item 3' },
-  { id: '4', content: 'Item 4' },
-  { id: '5', content: 'Item 5' },
-  { id: '6', content: 'Item 6' },
-  { id: '7', content: 'Item 7' },
-  { id: '8', content: 'Item 8' },
+  { id: '1', content: 'Ethical implications and societal impact' },
+  { id: '2', content: 'Accuracy and efficiency of algorithmic predictions' },
+  { id: '3', content: 'Transparency and explainability of AI decisions' },
+  { id: '4', content: 'Mitigation of biases in algorithmic outputs' },
+  { id: '5', content: 'Inclusivity and avoiding discrimination in AI applications' },
+  { id: '6', content: 'Speed of algorithmic processing' },
+  { id: '7', content: 'Protection of user privacy in AI data collection' },
+  { id: '8', content: 'Accessibility of AI technologies to diverse populations' },
 ];
+
 
 const colors = ['gold', 'silver', '#cd7f32']; // Gold, Silver, Bronze
 
@@ -48,7 +49,7 @@ function QuestionSeven() {
         </Button>
       </Box>
       <Typography variant="h7" component="h1" gutterBottom>
-      The following are selected real tweets. Click and rank the tweets that break your ethical values.
+      Rank the following considerations in the development and deployment of algorithms and artificial intelligence, from most to least important:
       </Typography>
       <Box sx={{ width: '50%', margin: '0 auto' }}>
         {itemsFromBackend.map((item) => (
