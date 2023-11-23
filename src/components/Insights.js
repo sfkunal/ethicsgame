@@ -21,6 +21,9 @@ function Insights() {
       </Typography>
       <Box>
         <Typography variant="body1">
+          {`Answers: ${answers.question1 + answers.question2 + answers.question3 + answers.question4 + answers.question5 + answers.question6 + answers.question7 + answers.question8 + answers.question9 + answers.question10}`}
+        </Typography>
+        {/* <Typography variant="body1">
           {`Question 1: ${answers.question1}`}
         </Typography>
         <Typography variant="body1">
@@ -49,7 +52,7 @@ function Insights() {
         </Typography>
         <Typography variant="body1">
           {`Question 10: ${answers.question10}`}
-        </Typography>
+        </Typography> */}
       </Box>
     </Box>
   );

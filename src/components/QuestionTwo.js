@@ -14,7 +14,7 @@ function QuestionTwo() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-      const answer = 'The highest priority in tehcnology regulation should be ' + selectedValue + '.';
+      const answer = 'The highest priority in tehcnology regulation should be ' + selectedValue + '. ';
 			setAnswers({ ...answers, question2: answer });
       navigate('/q3'); // replace with the path to the next question
     } else {

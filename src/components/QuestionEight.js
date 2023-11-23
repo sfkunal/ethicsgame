@@ -14,7 +14,7 @@ function QuestionEight() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-      const answer = 'In the context of intellectual property, the primary focus of legal frameworks should be ' + selectedValue + '.';
+      const answer = 'In the context of intellectual property, the primary focus of legal frameworks should be ' + selectedValue + '. ';
 			setAnswers({ ...answers, question8: answer });
       navigate('/q9'); // replace with the path to the next question
     } else {

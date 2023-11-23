@@ -14,7 +14,7 @@ function QuestionOne() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-      const answer = 'The primary virtue that should guide technological innovation is ' + selectedValue + '.';
+      const answer = 'The primary virtue that should guide technological innovation is ' + selectedValue + '. ';
 			setAnswers({ ...answers, question1: answer });
       navigate('/q2'); // replace with the path to the next question
     } else {

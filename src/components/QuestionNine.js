@@ -14,7 +14,7 @@ function QuestionNine() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-      const answer = 'When addressing misinformation, the primary responsibility of online platforms should be ' + selectedValue + '.';
+      const answer = 'When addressing misinformation, the primary responsibility of online platforms should be ' + selectedValue + '. ';
 			setAnswers({ ...answers, question9: answer });
       navigate('/q10'); // replace with the path to the next question
     } else {

@@ -33,7 +33,7 @@ function QuestionFour() {
 	const nextQuestion = () => {
     if (selectedItems.length === 3) {
 			const selectedItemsContent = selectedItems.map(item => item.content).join(', ');
-      setAnswers({ ...answers, question4: 'The most important things to me in the realm of intellectual property are ' + selectedItemsContent });
+      setAnswers({ ...answers, question4: ' The most important things to me in the realm of intellectual property are ' + selectedItemsContent + '. '});
       navigate('/q5'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');

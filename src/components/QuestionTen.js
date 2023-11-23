@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
 const imagesFromBackend = [
-  { id: '1', src: 'dystopian.jpeg' },
-  { id: '2', src: 'utopian.jpeg' },
-  { id: '3', src: 'war.jpeg' },
-  { id: '4', src: 'space.jpeg' },
+  { id: '1', src: 'dystopian.jpeg', desc: 'In 100 years, I think we will have a dark, gloomy, distopian future.' },
+  { id: '2', src: 'utopian.jpeg', desc: 'In 100 years, I think we will have a happy, healthy utopian future.' },
+  { id: '3', src: 'war.jpeg', desc: 'In 100 years, I think we will have a war-torn, conflict-filled future.' },
+  { id: '4', src: 'space.jpeg', desc: 'In 100 years, I think our future will largely be multi-planetary and technological.' },
 ];
 
 function QuestionTen() {
@@ -22,7 +22,7 @@ function QuestionTen() {
   const nextQuestion = () => {
     if (selectedValue) {
 			const selectedImage = imagesFromBackend.find(image => image.id === selectedValue);
-      setAnswers({ ...answers, question10: selectedImage.src });
+      setAnswers({ ...answers, question10: selectedImage.desc });
       navigate('/insights'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');
