@@ -14,7 +14,8 @@ function QuestionOne() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-			setAnswers({ ...answers, question1: selectedValue });
+      const answer = 'The primary virtue that should guide technological innovation is ' + selectedValue + '.';
+			setAnswers({ ...answers, question1: answer });
       navigate('/q2'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');
@@ -40,16 +41,16 @@ function QuestionOne() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Efficiency" />
+            <FormControlLabel value="Efficiency" control={<Radio />} label="Efficiency" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Justice" />
+            <FormControlLabel value="Justice" control={<Radio />} label="Justice" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Profitability" />
+            <FormControlLabel value="Profitability" control={<Radio />} label="Profitability" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Innovation" />
+            <FormControlLabel value="Innovation" control={<Radio />} label="Innovation" />
           </Grid>
         </Grid>
       </RadioGroup>

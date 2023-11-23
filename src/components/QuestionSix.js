@@ -34,7 +34,7 @@ function QuestionSix() {
 	const nextQuestion = () => {
     if (selectedItems.length === 3) {
 			const selectedItemsContent = selectedItems.map(item => item.content).join(', ');
-      setAnswers({ ...answers, question6: selectedItemsContent });
+      setAnswers({ ...answers, question6: 'The most important things to me in the realm of engineering ethics are ' + selectedItemsContent });
       navigate('/q7'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');

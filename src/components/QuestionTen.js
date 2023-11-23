@@ -38,7 +38,7 @@ function QuestionTen() {
       style={{ minHeight: '100vh' }}
     >
       <Typography variant="h4" component="h1" gutterBottom>
-        Which image do you prefer?
+        How do you envision humanity in 100 years?
       </Typography>
       <RadioGroup
         aria-label="quiz"

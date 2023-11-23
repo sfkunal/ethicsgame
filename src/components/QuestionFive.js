@@ -34,7 +34,7 @@ function QuestionFive() {
 	const nextQuestion = () => {
     if (selectedItems.length === 3) {
 			const selectedItemsContent = selectedItems.map(item => item.content).join(', ');
-      setAnswers({ ...answers, question5: selectedItemsContent });
+      setAnswers({ ...answers, question5: 'The most important approaches to me in misinformation and content moderation are ' + selectedItemsContent });
       navigate('/q6'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');

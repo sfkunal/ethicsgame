@@ -34,7 +34,7 @@ function QuestionSeven() {
 	const nextQuestion = () => {
     if (selectedItems.length === 3) {
 			const selectedItemsContent = selectedItems.map(item => item.content).join(', ');
-      setAnswers({ ...answers, question7: selectedItemsContent });
+      setAnswers({ ...answers, question7: 'The most important things to me in the realm of algorithms and artificial intelligence are ' + selectedItemsContent });
       navigate('/q8'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');

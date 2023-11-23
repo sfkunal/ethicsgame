@@ -14,7 +14,8 @@ function QuestionTwo() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-			setAnswers({ ...answers, question2: selectedValue });
+      const answer = 'The highest priority in tehcnology regulation should be ' + selectedValue + '.';
+			setAnswers({ ...answers, question2: answer });
       navigate('/q3'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');
@@ -40,16 +41,16 @@ function QuestionTwo() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Individual freedom" />
+            <FormControlLabel value="Individual freedom" control={<Radio />} label="Individual freedom" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Social harmony" />
+            <FormControlLabel value="Social harmony" control={<Radio />} label="Social harmony" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Technological progress" />
+            <FormControlLabel value="Technological progress" control={<Radio />} label="Technological progress" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="National security" />
+            <FormControlLabel value="National security" control={<Radio />} label="National security" />
           </Grid>
         </Grid>
       </RadioGroup>

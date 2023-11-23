@@ -14,7 +14,8 @@ function QuestionEight() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-			setAnswers({ ...answers, question8: selectedValue });
+      const answer = 'In the context of intellectual property, the primary focus of legal frameworks should be ' + selectedValue + '.';
+			setAnswers({ ...answers, question8: answer });
       navigate('/q9'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');
@@ -40,16 +41,16 @@ function QuestionEight() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Protecting the rights of individual creators" />
+            <FormControlLabel value="Protecting the rights of individual creators" control={<Radio />} label="Protecting the rights of individual creators" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Encouraging market competition and innovation" />
+            <FormControlLabel value="Encouraging market competition and innovation" control={<Radio />} label="Encouraging market competition and innovation" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Ensuring broad access to information and knowledge" />
+            <FormControlLabel value="Ensuring broad access to information and knowledge" control={<Radio />} label="Ensuring broad access to information and knowledge" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Safeguarding corporate profits and investments" />
+            <FormControlLabel value="Safeguarding corporate profits and investments" control={<Radio />} label="Safeguarding corporate profits and investments" />
           </Grid>
         </Grid>
       </RadioGroup>

@@ -14,7 +14,8 @@ function QuestionThree() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-			setAnswers({ ...answers, question3: selectedValue });
+      const answer = 'Empathy is ' + selectedValue + ' in technological decision-making.';
+			setAnswers({ ...answers, question3: answer });
       navigate('/q4'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');
@@ -40,16 +41,16 @@ function QuestionThree() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Essential for ethical development" />
+            <FormControlLabel value="Essential for ethical development" control={<Radio />} label="Essential for ethical development" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Irrelevant, decisions should be based on logic" />
+            <FormControlLabel value="Irrelevant, decisions should be based on logic" control={<Radio />} label="Irrelevant, decisions should be based on logic" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Nice to have but not crucial" />
+            <FormControlLabel value="Nice to have but not crucial" control={<Radio />} label="Nice to have but not crucial" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Impedes progress" />
+            <FormControlLabel value="Impedes progress" control={<Radio />} label="Impedes progress" />
           </Grid>
         </Grid>
       </RadioGroup>

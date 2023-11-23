@@ -14,7 +14,8 @@ function QuestionNine() {
 
   const nextQuestion = () => {
     if (selectedValue) {
-			setAnswers({ ...answers, question9: selectedValue });
+      const answer = 'When addressing misinformation, the primary responsibility of online platforms should be ' + selectedValue + '.';
+			setAnswers({ ...answers, question9: answer });
       navigate('/q10'); // replace with the path to the next question
     } else {
       alert('Please select an answer before proceeding.');
@@ -40,16 +41,16 @@ function QuestionNine() {
       >
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <FormControlLabel value="option1" control={<Radio />} label="Strengthening algorithmic content filtering" />
+            <FormControlLabel value="Strengthening algorithmic content filtering" control={<Radio />} label="Strengthening algorithmic content filtering" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option2" control={<Radio />} label="Promoting media literacy and critical thinking" />
+            <FormControlLabel value="Promoting media literacy and critical thinking" control={<Radio />} label="Promoting media literacy and critical thinking" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option3" control={<Radio />} label="Enforcing strict regulatory measures" />
+            <FormControlLabel value="Enforcing strict regulatory measures" control={<Radio />} label="Enforcing strict regulatory measures" />
           </Grid>
           <Grid item xs={6}>
-            <FormControlLabel value="option4" control={<Radio />} label="Protecting user privacy at all costs" />
+            <FormControlLabel value="Protecting user privacy at all costs" control={<Radio />} label="Protecting user privacy at all costs" />
           </Grid>
         </Grid>
       </RadioGroup>
