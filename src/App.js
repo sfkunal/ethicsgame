@@ -13,6 +13,8 @@ import QuestionNine from './components/QuestionNine';
 import QuestionTen from './components/QuestionTen';
 import Insights from './components/Insights';
 import './App.css';
+import logo from './logo.png';
+
 
 export const AnswersContext = React.createContext();
 
@@ -20,6 +22,7 @@ function App() {
   const [answers, setAnswers] = useState({});
   return (
     <div className="app-background">
+      <img src={logo} className="app-logo" alt="logo" />
       <AnswersContext.Provider value={{ answers, setAnswers }}>
         <Router>
           <Routes>

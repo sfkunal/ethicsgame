@@ -33,6 +33,14 @@
   /* min-height: 100vh; This makes sure the background color covers the full height of the page */
 }
 
+.app-logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70px; /* adjust as needed */
+  height: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
