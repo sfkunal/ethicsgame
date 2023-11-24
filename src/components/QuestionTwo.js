@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Button, Typography, RadioGroup, FormControlLabel, Radio, Grid } from '@mui/material';
+import { Button, Typography, RadioGroup, FormControlLabel, Radio, Grid, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
@@ -30,9 +30,10 @@ function QuestionTwo() {
       alignItems="center"
       style={{ minHeight: '100vh', width: '70%', margin: '0 auto' }}
     >
-      <Typography variant="h7" component="h1" gutterBottom>
+      <Typography variant="h7" component="h1" align="center">
       In the context of technology regulation, what should be the highest priority?
       </Typography>
+      <Box minHeight='10vh' />
       <RadioGroup
         aria-label="quiz"
         name="quiz"
@@ -54,6 +55,7 @@ function QuestionTwo() {
           </Grid>
         </Grid>
       </RadioGroup>
+      <Box minHeight='10vh' />
       <Button variant="contained" color="primary" onClick={nextQuestion}>
         Next
       </Button>

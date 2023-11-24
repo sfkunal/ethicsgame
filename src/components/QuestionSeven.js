@@ -43,14 +43,10 @@ function QuestionSeven() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-      <Box sx={{ alignSelf: 'flex-end', marginRight: 2 }}>
-        <Button variant="outlined" onClick={handleUndoClick} disabled={selectedItems.length === 0}>
-          Undo
-        </Button>
-      </Box>
-      <Typography variant="h7" component="h1" gutterBottom>
+      <Typography variant="h7" component="h1"  align="center" gutterBottom>
       Rank the following considerations in the development and deployment of algorithms and artificial intelligence, from most to least important:
       </Typography>
+      <Box minHeight='5vh' />
       <Box sx={{ width: '50%', margin: '0 auto' }}>
         {itemsFromBackend.map((item) => (
           <Box
@@ -69,9 +65,15 @@ function QuestionSeven() {
           </Box>
         ))}
       </Box>
-      <Button variant="contained" disabled={selectedItems.length < 3 } onClick={nextQuestion}>
-        Next
-      </Button>
+      <Box minHeight='2vh' />
+      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
+        <Button variant="outlined" onClick={handleUndoClick} disabled={selectedItems.length === 0}>
+          Undo
+        </Button>
+        <Button variant="contained" disabled={selectedItems.length < 3 } onClick={nextQuestion}>
+          Next
+        </Button>
+      </Box>
     </Box>
   );
 }

@@ -1,13 +1,17 @@
 import React, { useContext, useState } from 'react';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, CircularProgress, Button } from '@mui/material';
 import { AnswersContext } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 function Insights() {
   const { answers } = useContext(AnswersContext);
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const results = answers.question1 + answers.question2 + answers.question3 + answers.question4 + answers.question5 + answers.question6 + answers.question7 + answers.question8 + answers.question9 + answers.question10;
 
   const handleSubmit = async (event) => {
+    setLoading(true)
     await answers;
     event.preventDefault();
 
@@ -32,6 +36,12 @@ function Insights() {
     } else {
       console.error("Server error:", response && response.status);
     }
+
+    setLoading(false);
+  };
+
+  const handleBack = () => {
+    navigate('/');
   };
 
   return (
@@ -40,29 +50,45 @@ function Insights() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      height="100vh"
+      minHeight="100vh"
+      overflow="auto"
     >
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Box minHeight='5vh' />
+      <Typography variant="h3" component="h1" gutterBottom>
         Your Insights
       </Typography>
-      <button onClick={handleSubmit}>Get Data</button> {/* Add this line */}
-      {data && data.split('\n\n').map((paragraph, index) => (
-        paragraph.length > 0 && (
-          <Box 
-            key={index} 
-            sx={{ 
-              bgcolor: 'grey.300', 
-              m: 1, 
-              borderRadius: 1, 
-              p: 1 
-            }}
-          >
-            <Typography variant="body1">
-              {paragraph}
-            </Typography>
-          </Box>
+      {!data && !loading && <button onClick={handleSubmit}>Get Results</button>}
+      {loading ? (
+        <CircularProgress />
+      ) : (
+        data && (
+          <>
+            {data.split('\n\n').map((paragraph, index) => (
+              paragraph.length > 0 && (
+                <Box 
+                  key={index} 
+                  sx={{ 
+                    bgcolor: 'grey.300', 
+                    m: 1, 
+                    borderRadius: 4, 
+                    p: 1,
+                    width: '80%'
+                  }}
+                >
+                  <Typography variant="body1">
+                    {paragraph}
+                  </Typography>
+                </Box>
+              )
+            ))}
+            <Box minHeight='2vh' />
+            <Button variant="contained" color="primary" onClick={handleBack}>
+              Back to Start
+            </Button>
+            <Box minHeight='5vh' />
+          </>
         )
-      ))}
+      )}
     </Box>
   );
 }

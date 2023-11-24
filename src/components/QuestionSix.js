@@ -43,13 +43,9 @@ function QuestionSix() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-      <Box sx={{ alignSelf: 'flex-end', marginRight: 2 }}>
-        <Button variant="outlined" onClick={handleUndoClick} disabled={selectedItems.length === 0}>
-          Undo
-        </Button>
-      </Box>
-      <Typography variant="h7" component="h1" gutterBottom>
+      <Typography variant="h7" component="h1"  align="center" gutterBottom>
       Rank the following principles in order of importance for engineering ethics:
+      <Box minHeight='5vh' />
       </Typography>
       <Box sx={{ width: '50%', margin: '0 auto' }}>
         {itemsFromBackend.map((item) => (
@@ -69,9 +65,15 @@ function QuestionSix() {
           </Box>
         ))}
       </Box>
-      <Button variant="contained" disabled={selectedItems.length < 3 } onClick={nextQuestion}>
-        Next
-      </Button>
+      <Box minHeight='2vh' />
+      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
+        <Button variant="outlined" onClick={handleUndoClick} disabled={selectedItems.length === 0}>
+          Undo
+        </Button>
+        <Button variant="contained" disabled={selectedItems.length < 3 } onClick={nextQuestion}>
+          Next
+        </Button>
+      </Box>
     </Box>
   );
 }

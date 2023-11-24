@@ -12,30 +12,33 @@ import QuestionEight from './components/QuestionEight';
 import QuestionNine from './components/QuestionNine';
 import QuestionTen from './components/QuestionTen';
 import Insights from './components/Insights';
+import './App.css';
 
 export const AnswersContext = React.createContext();
 
 function App() {
   const [answers, setAnswers] = useState({});
   return (
-    <AnswersContext.Provider value={{ answers, setAnswers }}>
-      <Router>
-        <Routes>
-          <Route path="/q1" element={<QuestionOne />} />
-          <Route path="/q2" element={<QuestionTwo />} />
-          <Route path="/q3" element={<QuestionThree />} />
-          <Route path="/q4" element={<QuestionFour />} />
-          <Route path="/q5" element={<QuestionFive />} />
-          <Route path="/q6" element={<QuestionSix />} />
-          <Route path="/q7" element={<QuestionSeven />} />
-          <Route path="/q8" element={<QuestionEight />} />
-          <Route path="/q9" element={<QuestionNine />} />
-          <Route path="/q10" element={<QuestionTen />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/" element={<Welcome />} />
-        </Routes>
-      </Router>
-    </AnswersContext.Provider>
+    <div className="app-background">
+      <AnswersContext.Provider value={{ answers, setAnswers }}>
+        <Router>
+          <Routes>
+            <Route path="/q1" element={<QuestionOne />} />
+            <Route path="/q2" element={<QuestionTwo />} />
+            <Route path="/q3" element={<QuestionThree />} />
+            <Route path="/q4" element={<QuestionFour />} />
+            <Route path="/q5" element={<QuestionFive />} />
+            <Route path="/q6" element={<QuestionSix />} />
+            <Route path="/q7" element={<QuestionSeven />} />
+            <Route path="/q8" element={<QuestionEight />} />
+            <Route path="/q9" element={<QuestionNine />} />
+            <Route path="/q10" element={<QuestionTen />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/" element={<Welcome />} />
+          </Routes>
+        </Router>
+      </AnswersContext.Provider>
+    </div>
   );
 }
 

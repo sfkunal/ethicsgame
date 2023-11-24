@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.app-background {
+  background-color: #E8C396; /* Replace #yourColor with the color you want */
+  /* min-height: 100vh; This makes sure the background color covers the full height of the page */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

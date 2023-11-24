@@ -35,9 +35,9 @@ function QuestionTen() {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: '100vh' }}
+      style={{ minHeight: '100vh', margin: '0 auto' }}
     >
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography variant="h7" component="h1" align="center">
         How do you envision humanity in 100 years?
       </Typography>
       <RadioGroup
@@ -46,11 +46,11 @@ function QuestionTen() {
         value={selectedValue}
         onChange={handleChange}
       >
-        <Grid container spacing={3}>
+        <Grid container spacing={3} style={{margin: '0 auto'}}>
           {imagesFromBackend.map((image) => (
             <Grid item xs={6} key={image.id}>
               <Box component="label">
-                <img src={image.src} alt="" style={{  maxHeight: '200px' }} />
+                <img src={image.src} alt="" style={{  maxHeight: '250px' }} />
                 <FormControlLabel
                   value={image.id}
                   control={<Radio />}
