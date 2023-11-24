@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Button, Typography, RadioGroup, FormControlLabel, Radio, Grid, Box } from '@mui/material';
+import { Button, Typography, RadioGroup, FormControlLabel, Radio, Grid, Box, Card, CardMedia } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
@@ -40,28 +40,25 @@ function QuestionTen() {
       <Typography variant="h7" component="h1" align="center">
         How do you envision humanity in 100 years?
       </Typography>
-      <RadioGroup
-        aria-label="quiz"
-        name="quiz"
-        value={selectedValue}
-        onChange={handleChange}
-      >
-        <Grid container spacing={3} style={{margin: '0 auto'}}>
-          {imagesFromBackend.map((image) => (
-            <Grid item xs={6} key={image.id}>
-              <Box component="label">
-                <img src={image.src} alt="" style={{  maxHeight: '250px' }} />
-                <FormControlLabel
-                  value={image.id}
-                  control={<Radio />}
-                  label={`Option ${image.id}`}
-                  labelPlacement="bottom"
-                />
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </RadioGroup>
+      <Box minHeight='2vh' />
+      <Grid container spacing={0}>
+        {imagesFromBackend.map((image) => (
+          <Grid item xs={6} key={image.id}>
+            <Card 
+              onClick={() => setSelectedValue(image.id)} 
+              sx={{ maxWidth: "100%", border: selectedValue === image.id ? '2px solid blue' : 'none' }}
+            >
+              <CardMedia
+                component="img"
+                height="350"
+                image={image.src}
+                alt={image.desc}
+              />
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+      <Box minHeight='2vh' />
       <Button variant="contained" color="primary" onClick={nextQuestion}>
         Next
       </Button>
