@@ -57,7 +57,11 @@ function Insights() {
       <Typography variant="h3" component="h1" gutterBottom>
         Your Insights
       </Typography>
-      {!data && !loading && <button onClick={handleSubmit}>Get Results</button>}
+      {!data && !loading && (
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          Get Results
+        </Button>
+      )}
       {loading ? (
         <CircularProgress />
       ) : (

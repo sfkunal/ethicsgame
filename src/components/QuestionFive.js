@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Typography, Box, Button } from '@mui/material';
+import { Typography, Box, Button, LinearProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { AnswersContext } from '../App';
 
@@ -42,39 +42,42 @@ function QuestionFive() {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-      <Typography variant="h7" component="h1"  align="center" gutterBottom>
-      Rank the following approaches in addressing misinformation and content moderation in order of effectiveness:
-      </Typography>
-      <Box minHeight='5vh' />
-      <Box sx={{ width: '50%', margin: '0 auto' }}>
-        {itemsFromBackend.map((item) => (
-          <Box
-            key={item.id}
-            sx={{
-              margin: 1,
-              padding: 2,
-              border: '1px solid black',
-              borderRadius: 1,
-              backgroundColor: selectedItems.includes(item) ? colors[selectedItems.indexOf(item)] : '#fff',
-              cursor: 'pointer',
-            }}
-            onClick={() => handleItemClick(item)}
-          >
-            {item.content}
-          </Box>
-        ))}
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+        <Typography variant="h7" component="h1"  align="center" gutterBottom>
+        Rank the following approaches in addressing misinformation and content moderation in order of effectiveness:
+        </Typography>
+        <Box minHeight='5vh' />
+        <Box sx={{ width: '50%', margin: '0 auto' }}>
+          {itemsFromBackend.map((item) => (
+            <Box
+              key={item.id}
+              sx={{
+                margin: 1,
+                padding: 2,
+                border: '1px solid black',
+                borderRadius: 1,
+                backgroundColor: selectedItems.includes(item) ? colors[selectedItems.indexOf(item)] : '#fff',
+                cursor: 'pointer',
+              }}
+              onClick={() => handleItemClick(item)}
+            >
+              {item.content}
+            </Box>
+          ))}
+        </Box>
+        <Box minHeight='2vh' />
+        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
+          <Button variant="outlined" onClick={handleUndoClick} disabled={selectedItems.length === 0}>
+            Undo
+          </Button>
+          <Button variant="contained" disabled={selectedItems.length < 3 } onClick={nextQuestion}>
+            Next
+          </Button>
+        </Box>
       </Box>
-      <Box minHeight='2vh' />
-      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-        <Button variant="outlined" onClick={handleUndoClick} disabled={selectedItems.length === 0}>
-          Undo
-        </Button>
-        <Button variant="contained" disabled={selectedItems.length < 3 } onClick={nextQuestion}>
-          Next
-        </Button>
-      </Box>
-    </Box>
+      <LinearProgress variant="determinate" value={40} style={{ position: 'absolute', bottom: 0, width: '100%', height: '10px' }} />
+    </div>
   );
 }
 
