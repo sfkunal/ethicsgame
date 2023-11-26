@@ -14,7 +14,7 @@ const itemsFromBackend = [
   { id: '8', content: 'Promoting open-source initiatives' },
 ];
 
-const colors = ['gold', 'silver', '#cd7f32']; // Gold, Silver, Bronze
+const colors = ['#6ba358', '#f3fd86', '#ff8b28'];
 
 function QuestionFour() {
 	const navigate = useNavigate();

@@ -38,12 +38,12 @@ function QuestionTen() {
           How do you envision humanity in 100 years?
         </Typography>
         <Box minHeight='2vh' />
-        <Grid container spacing={0}>
+        <Grid container spacing={1} sx={{width: "99%"}}>
           {imagesFromBackend.map((image) => (
             <Grid item xs={6} key={image.id}>
               <Card 
                 onClick={() => setSelectedValue(image.id)} 
-                sx={{ maxWidth: "100%", border: selectedValue === image.id ? '2px solid blue' : 'none' }}
+                sx={{ maxWidth: "100%", border: selectedValue === image.id ? '2px solid blue' : '1px solid white' }}
               >
                 <CardMedia
                   component="img"
