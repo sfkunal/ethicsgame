@@ -14,6 +14,8 @@ import QuestionTen from './components/QuestionTen';
 import Insights from './components/Insights';
 import './App.css';
 import logo from './logo.png';
+import Documentation from './components/Documentation';
+import Proposals from './components/Proposals';
 
 
 export const AnswersContext = React.createContext();
@@ -37,6 +39,8 @@ function App() {
             <Route path="/q9" element={<QuestionNine />} />
             <Route path="/q10" element={<QuestionTen />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/documentation" element={<Documentation />} />
+            <Route path="/proposals" element={<Proposals />} />
             <Route path="/" element={<Welcome />} />
           </Routes>
         </Router>

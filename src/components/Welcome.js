@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Typography, Box } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Welcome() {
   const navigate = useNavigate();
@@ -29,6 +29,16 @@ function Welcome() {
       <Button variant="contained" color="primary" onClick={startGame}>
         Start Game
       </Button>
+      <Link to="/documentation" style={{ position: 'absolute', left: '10px', top: '10px' }}>
+        <Button variant="contained" color="primary">
+          How It Works
+        </Button>
+      </Link>
+      <Link to="/proposals" style={{ position: 'absolute', left: '10px', top: '60px' }}>
+        <Button variant="contained" color="primary">
+          Policy Proposals
+        </Button>
+      </Link>
     </Box>
   );
 }
