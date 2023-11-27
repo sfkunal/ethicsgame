@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Typography, Box, CircularProgress, Button } from '@mui/material';
 import { AnswersContext } from '../App';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Insights() {
   const { answers } = useContext(AnswersContext);
@@ -93,6 +93,16 @@ function Insights() {
           </>
         )
       )}
+      <Link to="/documentation" style={{ position: 'absolute', left: '10px', top: '10px' }}>
+        <Button variant="contained" color="primary">
+          How It Works
+        </Button>
+      </Link>
+      <Link to="/proposals" style={{ position: 'absolute', left: '10px', top: '60px' }}>
+        <Button variant="contained" color="primary">
+          Policy Proposals
+        </Button>
+      </Link>
     </Box>
   );
 }
